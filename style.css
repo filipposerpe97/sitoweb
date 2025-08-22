@@ -1,0 +1,256 @@
+/* Stili generali del corpo della pagina */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Stili per il contenitore principale */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Stili dell'header */
+header {
+    background: transparent;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.4s ease, padding-top 0.4s ease;
+}
+
+header.scrolled {
+    background: #333;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    float: right;
+    margin-top: 10px;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header .logo {
+    float: left;
+    margin: 0;
+}
+
+header .logo a {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+#hero {
+    background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+    color: #fff;
+    padding: 180px 0 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+#hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#hero p {
+    font-size: 20px;
+}
+
+/* Servizi Section */
+#servizi {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#servizi h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servizio {
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 400px;
+    /* Reset animation properties if they were on .servizio before */
+    opacity: 1;
+    transform: none;
+    transition: none;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: #0779e4;
+}
+
+/* Swiper pagination bullets */
+.swiper-pagination-bullet-active {
+    background: #0779e4;
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 40px 0;
+    text-align: center;
+    background: #fff;
+}
+
+#portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* CTA Section */
+#cta {
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background: #0779e4;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background: #056ac8;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #333;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #0779e4;
+    text-decoration: none;
+}
+
+/* Contact Form */
+#contatti {
+    padding: 60px 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+#contatti h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+#contatti form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contatti input[type="text"],
+#contatti input[type="email"],
+#contatti textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Aggiunto per un corretto box model */
+}
+
+#contatti textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contatti button {
+    width: auto;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+}
